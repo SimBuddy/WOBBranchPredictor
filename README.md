@@ -21,6 +21,7 @@ The design was implemented using native FPGA memory blocks, and all 25 block-mem
 This distinction matters because many apparent computational savings disappear when translated into hardware. A design may skip using a result while the underlying memory and logic continue switching internally. In the WOB implementation, the expensive memory access itself was suppressed.
 
 **Allocating computation rather than replacing the predictor**
+
 The perceptron predictor used in the experiment resembles a small machine-learning model. It combines a history vector with learned signed weights and computes a dot product to decide whether a branch is likely to be taken.
 
 WOB does not attempt to replace this predictor with a cheaper one. Instead, it asks a different question: does the expensive predictor need to run on this particular branch?
