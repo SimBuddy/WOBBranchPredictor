@@ -1,0 +1,4 @@
+{
+  "executable_name": "champsim-a-only",
+  "ooo_cpu": [{"branch_predictor": "bimodal"}]
+}

@@ -1,0 +1,4 @@
+{
+  "executable_name": "champsim-wob",
+  "ooo_cpu": [{"branch_predictor": "wob"}]
+}

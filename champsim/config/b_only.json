@@ -1,0 +1,4 @@
+{
+  "executable_name": "champsim-b-only",
+  "ooo_cpu": [{"branch_predictor": "perceptron"}]
+}
