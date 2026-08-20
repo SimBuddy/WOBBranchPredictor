@@ -29,15 +29,18 @@ A small selector based on the state of the cheap predictor and a compact error c
 This makes WOB closer to a computation-allocation system than a new prediction model.
 
 **Exact behaviour preserved**
+
 One of the main challenges was ensuring that reduced computation did not introduce hidden changes in predictor state. During development, several apparently successful implementations were rejected after detailed testing showed differences that were invisible in headline accuracy figures.
 
 The final design was required to match branch-by-branch selector behaviour, predictor state, training events and final memory contents.
 The completed implementation recorded zero selector mismatches across 147,894 tested events. It also passed 128 exhaustive local-state cases, matched 24 final mode-and-workload state comparisons, reproduced the full 32-row regression matrix and remained deterministic across repeated runs.
 
 **Prediction latency was unchanged.**
+
 The final design also retained 22 additional flushes associated with genuine bypass behavior rather than attempting to hide that cost with speculative or warming mechanisms.
 
 **Hardware overhead reduced**
+
 An important question was whether the machinery required to decide when to skip computation would itself become expensive.
 A related technique, called Nitpicker, was used to reduce this overhead without altering WOB's decision policy.
 
@@ -47,6 +50,7 @@ The WOB implementation was reduced from 11,535 to 2,814 FPGA lookup tables and f
 Most of the remaining critical-path delay came from physical routing rather than from the selector logic itself.
 
 **Power savings likely, but not yet measured**
+
 The results provide strong evidence that WOB reduces physical computational activity, but they do not yet establish an electrical energy saving.
 No sufficiently credible power-analysis flow was available that could model the specific FPGA memories, routing and switching activity used in the experiment. Direct board-level power measurement was also not completed.
 
@@ -55,6 +59,7 @@ As a result, the claim of a reduction in watts, joules or percentage energy cons
 A rough engineering expectation is that branch-predictor dynamic power could fall substantially, potentially on the order of tens of percent, but that remains an estimate rather than an experimental result.
 
 **A broader computing principle?**
+
 The significance of the experiment may extend beyond branch prediction.
 
 WOB is based on the idea that not all computation has equal marginal value. If a cheap mechanism can identify cases where additional work is unlikely to improve the result enough to justify its cost, that work can be selectively avoided.
