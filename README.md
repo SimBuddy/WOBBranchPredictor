@@ -70,5 +70,3 @@ The next major question is whether the same approach can produce similar gains i
 If it does, WOB could point toward a broader class of systems in which computation is not simply optimized for speed, but actively budgeted according to its expected usefulness.
 
 See `docs/ALGORITHM.md` for final behavior and `docs/IMPLEMENTATIONS.md` for the distinction between simulator and hardware machinery. Research experiments, traces, workloads, results, and superseded designs are excluded.
-
-Both implementations passed their clean-room technical gates. Public release remains blocked because no licence grant for WOB-authored code was found; see `LICENSE_NOT_INCLUDED.md`.
