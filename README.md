@@ -16,7 +16,7 @@ The final implementation performed 3.43 million fewer memory reads and 2.01 mill
 
 **The savings were not limited to software simulation.**
 
-The design was implemented using native FPGA memory blocks, and all 25 block-memory units used for expensive prediction were physically controlled by the WOB selection signal. When WOB methodology-code determined that the expensive predictor was unnecessary, the corresponding block-memory reads were disabled at the hardware enable pins.
+The design was implemented using native FPGA memory blocks, and all 25 block-memory units used for expensive prediction were physically controlled by the WOB selection signal. When WOB methodology-code determined that the expensive predictor was unnecessary, the corresponding block-memory reads were disabled at the hardware enable pins.  The methodology extended itself into the actual hardware implementation.
 
 This distinction matters because many apparent computational savings disappear when translated into hardware. A design may skip using a result while the underlying memory and logic continue switching internally. In the WOB implementation, the expensive memory access itself was suppressed.
 
