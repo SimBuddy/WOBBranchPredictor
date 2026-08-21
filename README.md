@@ -6,6 +6,8 @@ This repository tree contains two final implementations:
 2. [VexRiscv/SpinalHDL hardware implementation](vexriscv/README.md)
 
 **WOB is an experimental methodology**. Its goal is to provide a means of refactoring source code for data intensive applications, and increase their effectiveness.
+
+
 **EXPERIMENT 1** - In the experiment below, WOB is being applied to bimodal and perceptron caching algorithms found in moderns CPUs.
 
 WOB treats the caching computation itself as a resource to be allocated selectively. Instead of running a complex predictor for every branch instruction, WOB first uses a cheaper predictor and a small amount of state to decide whether the more expensive predictor is likely to be worth invoking.
