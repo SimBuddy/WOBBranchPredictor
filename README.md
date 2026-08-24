@@ -7,6 +7,22 @@ This repository tree contains two final implementations:
 
 **WOB is an experimental methodology**. Its goal is to provide a means of refactoring source code for data intensive applications, and increase their effectiveness.
 
+**WOB Compared with Conventional Refactoring**
+Traditional refactoring improves code structure and maintainability.
+Performance optimization finds slow parts and makes them faster.
+Profile-guided optimization measures where execution time is being spent and concentrates effort there.
+Adaptive systems vary behaviour depending on conditions, usually within a specific mechanism.
+
+
+**WOB takes a broader system-level view:**
+Is this processing justified here, at this level, and in this form?
+A conventional optimizer might find an expensive function and make it faster.
+WOB may instead discover that the larger system can avoid, reduce, defer, reuse, reorder, or selectively deepen that processing.
+The distinction is:
+Traditional optimization improves execution. WOB reconsiders how much processing should happen, where, and when.
+WOB can refactor code that has been already been conventionally refactored, because it is doing something entirely different. 
+
+
 
 **EXPERIMENT 1** - In the experiment below, WOB is being applied to bimodal and perceptron caching algorithms found in moderns CPUs.
 
