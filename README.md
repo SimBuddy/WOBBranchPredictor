@@ -5,7 +5,7 @@ This repository tree contains two final implementations:
 1. [ChampSim software/reference implementation](champsim/README.md)
 2. [VexRiscv/SpinalHDL hardware implementation](vexriscv/README.md)
 
-**WOB is an experimental methodology**. Its goal is to provide a radical new means of refactoring source code for data intensive applications, and increase their effectiveness.
+**WOB is an experimental methodology**. Its goal is to provide a novel means of refactoring source code for data intensive applications, and increase their effectiveness.
 
 **WOB Compared with Conventional Refactoring**
 Traditional refactoring improves code structure and maintainability.
