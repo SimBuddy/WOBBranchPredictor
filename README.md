@@ -21,7 +21,7 @@ WOB may instead discover that the larger system can avoid, reduce, defer, reuse,
 
 **The distinction is:**
 Traditional optimization improves execution. WOB reconsiders how much processing should happen, where, and when.
-WOB can refactor code that has been already been conventionally refactored, because it is doing something entirely different. 
+WOB can improve code that has been already been conventionally refactored and optimised, because it is doing something entirely different. 
 
 
 
